@@ -16,4 +16,21 @@ This repository features a prototype system for matching patients to clinical tr
 
 ## Reproducing Results
 The quickest way to reproduce or skim results is via **Google Colab notebooks**:
-1. Explore trial data using `analyse_trials.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/analyse_trials.ipynb)
+0. Requirements: Google account, access to Google Drive (and mounted at `/content/drive/`; see setup code inside each notebook)
+  - **Important note**: data files needed for the analysis (i.e., trial data, indexing records, and patient profiles) are currently not accessible in this repository. However, if you have the data (anonymised), you could easily upload them to your personal drive and put them under the same folder with the notebooks (e.g., _/content/drive/MyDrive/Projects/case_study_mT/_) to set the pipeline to work.
+1. Explore trial data
+   - Open `analyse_trials.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/analyse_trials.ipynb)
+   - This notebook:
+     - Explores and preprocesses the clinical trial dataset
+     - Loads enrollment info via clinicalgov.com API
+     - Saves filtered trial records as metadata
+2. Run the patient–trial matching pipeline
+   - Open `TrialSearch_prototype.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/TrialSearch_prototype.ipynb)
+   - This notebook:
+     - Loads the metadata generated from raw trial data, indexing records (i.e., `indexing_records.csv`) and patient profiles (e.g., `patient_01.json`, `patient_02.json`, etc.)
+     - Search trial data related to Duchenne Muscular Dystrophy based on **NCT-numbers**
+     - Builds prompts and calls the LLM (`GPT-4.1-mini`) to summarise and score eligibility for Duchenne Muscular Dystrophy, matching patients with trials
+     - Saves results in structured JSON (`Results_eligibility.json`)
+3. Try the API prototype
+   - Open `api.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/api.ipynb)
+   - Demonstrates how to wrap the pipeline into a FastAPI service with endpoints for **Listing patients** and **Querying eligibility scores** per patient (ongoing).
