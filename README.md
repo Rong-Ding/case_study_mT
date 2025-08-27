@@ -43,7 +43,6 @@ If you prefer to go through the pipelines/results locally instead of Colab, foll
    git clone https://github.com/Rong-Ding/case_study_mT.git
    cd case_study_mT
 ```
-
-2. 
+2. Install dependencies
 3. 
 
