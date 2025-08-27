@@ -1,0 +1,5 @@
+# Ignore big datafiles
+data/df_rec_phases.pkl
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
