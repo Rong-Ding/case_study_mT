@@ -3,7 +3,7 @@ This repository features a prototype system for matching patients to clinical tr
 
 ## Repository Structure
 - _data/_ : Contains datasets and results.
-  - Saved eligibility results (`Results_eligibility.json`)
+  - Saved eligibility results across trials per patient (`Results_eligibility.json`)
 - _notebooks/_ : Prototyping and analysis in Google Colab/Jupyter.
   - `analyse_trials.ipynb` → trial data exploration and cleaning
   - `TrialSearch_prototype.ipynb` → main pipeline for patient–trial matching
