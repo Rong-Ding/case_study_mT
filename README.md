@@ -1,5 +1,5 @@
 ## 🧪 Clinical Trial Eligibility Matching Prototype
-This repository features a prototype system for matching patients to clinical trials using Large Language Models (LLMs). An ETL pipeline to analyse and transform trial data and a prototype for API data endpoints are also included.
+This repository features a prototype system for matching patients to clinical trials using Large Language Models (LLMs). An ETL pipeline to analyse and transform trial data and a prototype for API data endpoints are also available.
 
 ## Repository Structure
 - _data/_ : Contains datasets and results.
@@ -15,3 +15,5 @@ This repository features a prototype system for matching patients to clinical tr
   - `trialsearch_utils.py` → functions for building prompts, calling LLMs
 
 ## Reproducing Results
+The quickest way to reproduce or skim results is via **Google Colab notebooks**:
+1. Explore trial data using `analyse_trials.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/analyse_trials.ipynb)
