@@ -7,12 +7,19 @@ This repository features a prototype system for matching patients to clinical tr
 - _notebooks/_ : Prototyping and analysis in Google Colab/Jupyter.
   - `analyse_trials.ipynb` → trial data exploration and cleaning
   - `TrialSearch_prototype.ipynb` → main pipeline for patient–trial matching
-  - `api.ipynb` → prototype FastAPI service tested in Colab
+  - `app/` → contains modular code for reproducibility
+    - `model.py` → calling Pydantic base model to facilitate standard API building
+    - `api/` → folder containing API prototype
+      - `api.ipynb` → prototype FastAPI service tested in Colab
 - _pyfiles/_ : Python exports of the notebooks (cleaner scripts for reference).
 - _src/_ : Utility modules (with helper functions) used by notebooks and API.
   - `analyse_utils.py` → functions for parsing and analysing trial data
   - `api_utils.py` → helpers for FastAPI endpoints
   - `trialsearch_utils.py` → functions for building prompts, calling LLMs
+- _requirements*.txt_ : Environment reproducibility.
+  - `requirements.txt` → core dependencies
+  - `requirements_notebooks.txt` → for running notebooks in Colab
+  - `requirements_api.txt` → for running the FastAPI service
 
 ## Reproducing Results
 The quickest way to reproduce or skim results is via **Google Colab notebooks**:
@@ -43,7 +50,40 @@ If you prefer to go through the pipelines/results locally instead of Colab, foll
    git clone https://github.com/Rong-Ding/case_study_mT.git
    cd case_study_mT
 ```
-
-2. 
-3. 
-
+2. Install dependencies
+```bash
+   pip install -r requirements_analyse_trials.txt
+   pip install -r requirements_search_prototype.txt
+   pip install -r requirements_api.txt.txt
+```
+3. Prepare data
+  - Place the following files into `data/` (not included in repo due to size/privacy):
+    - Clinical trial dataset (e.g., `payloads.jsonl`, or metadata `df_rec_phases.pkl`)
+    - Patient profiles (`patient_01.json`, `patient_02.json`, ...)
+    - Indexing records (`indexing_records.csv`)
+  - Ensure the structure looks like:
+      case_study_mT/
+      ├── data/
+      │   ├── df_rec_phases.pkl
+      │   ├── patient_01.json
+      │   ├── patient_02.json
+      │   └── indexing_records.csv
+4. Run the pipeline
+  - From the command line:
+```bash
+   python pyfiles/analyse_trials.py
+```
+  - This script:
+    - Loads and transforms trial data
+```bash
+   python pyfiles/TrialSearch_prototype.ipynb.py
+```
+  - This script:
+    - Loads trial and patient data
+    - Builds prompts and calls the LLM (`GPT-4.1-mini`)
+    - Saves results into `data/Results_eligibility.json`
+```bash
+   python pyfiles/TrialSearch_prototype.ipynb.py
+```
+  - This script:
+    - Demonstrates how to wrap the pipeline into a FastAPI service with endpoints for listing patients and querying eligibility scores per patient (ongoing)
