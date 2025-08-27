@@ -21,7 +21,7 @@ This repository features a prototype system for matching patients to clinical tr
   - `requirements_notebooks.txt` → for running notebooks in Colab
   - `requirements_api.txt` → for running the FastAPI service
 
-## Reproducing Results
+## Reproducing Results via Google Colab
 The quickest way to reproduce or skim results is via **Google Colab notebooks**:
 
 0. Requirements: Google account, access to Google Drive (and mounted at `/content/drive/`; see setup code inside each notebook)
@@ -43,6 +43,7 @@ The quickest way to reproduce or skim results is via **Google Colab notebooks**:
    - Open `api.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/api.ipynb)
    - Demonstrates how to wrap the pipeline into a FastAPI service with endpoints for **Listing patients** and **Querying eligibility scores** per patient (ongoing).
 
+## Reproducing Results locally
 If you prefer to go through the pipelines/results locally instead of Colab, follow these steps:
 0. Requirements: Python 3.9+, [pip](https://pip.pypa.io/en/stable/) (or `conda`), and an OpenAI API key (for LLM calls, if you want to re-run eligibility scoring)
 1. Clone the repository
