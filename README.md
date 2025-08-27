@@ -3,6 +3,7 @@ This repository features a prototype system for matching patients to clinical tr
 
 ## Repository Structure
 - _data/_
+
   Contains datasets and results.
   - Saved eligibility results (`Results_eligibility.json`)
 - _notebooks/_
