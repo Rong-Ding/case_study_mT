@@ -39,14 +39,3 @@ The quickest way to reproduce or skim results is via **Google Colab notebooks**:
 3. Try the API prototype
    - Open `api.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rong-Ding/case_study_mT/blob/main/notebooks/api.ipynb)
    - Demonstrates how to wrap the pipeline into a FastAPI service with endpoints for **Listing patients** and **Querying eligibility scores** per patient (ongoing).
-
-If you prefer to go through the pipelines/results locally instead of Colab, follow these steps:
-0. Requirements: Python 3.9+, [pip](https://pip.pypa.io/en/stable/) (or `conda`), and an OpenAI API key (for LLM calls, if you want to re-run eligibility scoring)
-1. Clone the repository
- ```bash
-   git clone https://github.com/Rong-Ding/case_study_mT.git
-   cd case_study_mT
-```
-2. Install dependencies
-3. 
-
