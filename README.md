@@ -1,6 +1,10 @@
 ## 🧪 Clinical Trial Eligibility Matching Prototype
 This repository features a prototype system for matching patients to clinical trials using Large Language Models (LLMs). An ETL pipeline to analyse and transform trial data and a prototype for API data endpoints are also available.
 
+> 🔔 **Note:** For the latest project structure and bug fixes, see the 
+> [`post_submission_v1`](https://github.com/Rong-Ding/case_study_mT/tree/post_submission_v1) branch.  
+> It includes a correct & cleaner notebook organisation, added requirements files, and fixes to the pipeline.
+
 ## Repository Structure
 - _data/_ : Contains datasets and results.
   - Saved eligibility results across trials per patient (`Results_eligibility.json`)
