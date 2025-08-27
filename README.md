@@ -16,6 +16,7 @@ This repository features a prototype system for matching patients to clinical tr
 
 ## Reproducing Results
 The quickest way to reproduce or skim results is via **Google Colab notebooks**:
+
 0. Requirements: Google account, access to Google Drive (and mounted at `/content/drive/`; see setup code inside each notebook)
   - **Important note**: data files needed for the analysis (i.e., trial data, indexing records, and patient profiles) are currently not accessible in this repository. However, if you have the data (anonymised), you could easily upload them to your personal drive and put them under the same folder with the notebooks (e.g., _/content/drive/MyDrive/Projects/case_study_mT/_) to set the pipeline to work.
 1. Explore trial data
