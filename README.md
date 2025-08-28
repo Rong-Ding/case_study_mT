@@ -63,12 +63,14 @@ If you prefer to go through the pipelines/results locally instead of Colab, foll
     - Patient profiles (`patient_01.json`, `patient_02.json`, ...)
     - Indexing records (`indexing_records.csv`)
   - Ensure the structure looks like:
+```
       case_study_mT/
       ├── data/
       │   ├── df_rec_phases.pkl
       │   ├── patient_01.json
       │   ├── patient_02.json
       │   └── indexing_records.csv
+```
 4. Run the pipeline
   - From the command line:
 ```bash
