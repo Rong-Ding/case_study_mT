@@ -71,8 +71,8 @@ If you prefer to go through the pipelines/results locally instead of Colab, foll
       │   ├── patient_02.json
       │   └── indexing_records.csv
 ```
-3. Replace the `.ipynb` files in `notebooks/` with their corresponding Python exports in `pyfiles/`
-4. Run the pipeline
+4. Replace the `.ipynb` files in `notebooks/` with their corresponding Python exports in `pyfiles/`
+5. Run the pipeline
   - From the command line:
 ```bash
    python notebooks/analyse_trials.py
