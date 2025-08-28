@@ -72,22 +72,4 @@ If you prefer to go through the pipelines/results locally instead of Colab, foll
       │   └── indexing_records.csv
 ```
 4. Replace the `.ipynb` files in `notebooks/` with their corresponding Python exports in `pyfiles/`
-5. Run the pipeline
-  - From the command line:
-```bash
-   python notebooks/analyse_trials.py
-```
-  - This script:
-    - Loads and transforms trial data
-```bash
-   python notebooks/TrialSearch_prototype.py
-```
-  - This script:
-    - Loads trial and patient data
-    - Builds prompts and calls the LLM (`GPT-4.1-mini`)
-    - Saves results into `data/Results_eligibility.json`
-```bash
-   python notebooks/app/api/api.py
-```
-  - This script:
-    - Demonstrates how to wrap the pipeline into a FastAPI service with endpoints for listing patients and querying eligibility scores per patient (ongoing)
+5. Run the pipeline: you could open and run the scripts `analyse_trials.py`, `TrialSearch_prototype.py`, and `api.py` in any Python IDE, by adapting the file paths to your environment
