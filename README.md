@@ -55,7 +55,7 @@ If you prefer to go through the pipelines/results locally instead of Colab, foll
 ```bash
    pip install -r requirements_analyse_trials.txt
    pip install -r requirements_search_prototype.txt
-   pip install -r requirements_api.txt.txt
+   pip install -r requirements_api.txt
 ```
 3. Prepare data
   - Place the following files into `data/` (not included in repo due to size/privacy):
